@@ -69,3 +69,22 @@ table {
 .font-main {
 	font-family: 'Balsamiq Sans', cursive;
 }
+
+.h-54 {
+	height: 215px;
+}
+
+.px-18 {
+    padding-left: 4.5rem/* 80px */;
+    padding-right: 4.5rem/* 80px */;
+}
+
+.bg-forward {
+	background: rgba(255, 255, 255, 0.3)
+}
+
+
+
+.left-custom {
+	left: 34px;
+}

@@ -31,7 +31,7 @@ export default function Header() {
         }
     };
     return (
-        <nav className="bg-white font-main border-b-2 border-bottom-nav h-22 flex items-center px-20 sticky top-0">
+        <nav className="bg-white font-main border-b-2 border-bottom-nav h-22 flex items-center px-20 sticky top-0 z-10">
             <div className='w-1/6 flex items-center'>
                 <div className='w-24 h-20'>
                     <Lottie options={defaultOptions}
@@ -57,18 +57,16 @@ export default function Header() {
                 <Link className='h-12 items-center text-base flex text-slate-700' href="#" underline="none">
                     {'Login'}
                 </Link>
-                <div className='pl-4 flex gap-8'>
-                    <IconButton aria-label="cart">
-                        <Images src={HeartIcon} width={26} height={26} />
-                    </IconButton>
+                <IconButton aria-label="cart">
+                    <Images src={HeartIcon} width={26} height={26} />
+                </IconButton>
 
-                    <IconButton aria-label="cart">
-                        <StyledBadge badgeContent={4} color='warning'>
-                            {/* <ShoppingCartIcon /> */}
-                            <Images src={BagIcon} width={26} height={26} />
-                        </StyledBadge>
-                    </IconButton>
-                </div>
+                <IconButton aria-label="cart">
+                    <StyledBadge badgeContent={4} color='warning'>
+                        {/* <ShoppingCartIcon /> */}
+                        <Images src={BagIcon} width={26} height={26} />
+                    </StyledBadge>
+                </IconButton>
             </div>
         </nav>
     )
