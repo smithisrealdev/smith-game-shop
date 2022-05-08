@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import Carousel from '../components/CarouselComponent'
 import CardCategory from '../components/CardCategory'
-import ArcadeBg from '../assets/images/LoveYoutoBits.webp'
-import StrategyBg from '../assets/images/mario_logo.png'
+import ArcadeBg from '../assets/images/ArcadeBg.jpg'
+import ActionBg from '../assets/images/actionBg.jpg'
+import StrategyBg from '../assets/images/strategyBg.jpg'
 export default function WapperProduct() {
     return (
         <div className='flex px-20 py-8 gap-2 -z-0 '>
@@ -13,7 +14,7 @@ export default function WapperProduct() {
             <div className='flex w-5/12'>
                 <div className=' grid grid-flow-row gap-8'>
                     <CardCategory titlCategory='Arcade' img={ArcadeBg} />
-                    <CardCategory titlCategory='Action' img={ArcadeBg} />
+                    <CardCategory titlCategory='Action' img={ActionBg} />
                 </div>
                 <div className=' grid grid-flow-row gap-8'>
                     <CardCategory titlCategory='Strategy' img={StrategyBg} />

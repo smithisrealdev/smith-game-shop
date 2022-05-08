@@ -22,6 +22,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	font-family: 'Balsamiq Sans', cursive;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -83,6 +84,17 @@ table {
 	background: rgba(255, 255, 255, 0.3)
 }
 
+.h-custom {
+	height: 462px;
+}
+
+.top-22{
+	top: 86px;
+}
+
+.top-18{
+	top: 75px;
+}
 
 
 .left-custom {
