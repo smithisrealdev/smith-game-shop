@@ -7,7 +7,7 @@ import ActionBg from '../assets/images/actionBg.jpg'
 import StrategyBg from '../assets/images/strategyBg.jpg'
 export default function WapperProduct() {
     return (
-        <div className='flex px-20 py-8 gap-2 -z-0 '>
+        <div className='flex gap-2 -z-0 '>
             <div className='w-8/12'>
                 <Carousel />
             </div>
