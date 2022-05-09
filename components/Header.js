@@ -40,7 +40,7 @@ export default function Header() {
                         isStopped={isStopped}
                         isPaused={isPaused} />
                 </div>
-                <h1 className=' font-extrabold text-2xl'>
+                <h1 className=' font-extrabold text-orange-500 text-2xl'>
                     SmithShop
                 </h1>
             </div>

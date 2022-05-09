@@ -11,11 +11,9 @@ export default function Home() {
     <div className='max-h-screen'>
       <HeadHtml />
       <Header />
-         <div className=' bg-search h-screen flex px-20 py-8'>
-           <div className='float-left w-full h-screen'>
+           <div className='float-left  w-full bg-search flex flex-col h-screen'>
               <WapperProduct />
               <ListProduct />
-           </div>
          </div>
     </div>
   )
