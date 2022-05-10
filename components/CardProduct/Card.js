@@ -12,6 +12,8 @@ import TellMeWhyBg from '../../assets/images/TellMeWhy_xbox.jpg'
 import Psychonauts2Bg from '../../assets/images/Psychonauts-2_xbox.jpg'
 import bag from '../../assets/images/bag-white.png'
 import { container, item } from '../../utils/motionVariants'
+import playIcon from '../../assets/images/iconplay_orange.png'
+import Button from '@mui/material/Button';
 const items = [
     {
         id: 1,
@@ -60,15 +62,31 @@ export default function Card() {
 
     return (
         <AnimateSharedLayout>
-            <motion.ul
+            <motion.div
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className='mt-8 grid grid-cols-4 gap-4 cursor-pointer' layout>
-                {items.map(list => (
-                    <Item id={list.id} img={list.img} price={list.price} key={list} />
-                ))}
-            </motion.ul>
+                layout>
+                <motion.div className='mt-8 grid grid-cols-4 gap-4 cursor-pointer' layout>
+                    {items.map(list => (
+                        <Item id={list.id} img={list.img} price={list.price} key={list} />
+                    ))}
+                </motion.div>
+                <motion.div variants={item} className='flex flex-1 justify-center items-center'>
+                    <Button variant="outlined" color='warning' className='animate-bounce text-orange-500 border-orange-500  justify-around items-center px-5 mt-10 flex rounded-full border-1 h-12 w-40 text-base'>
+                        <h1 className=' text-sm'>Show More</h1>
+                        <Images
+                            className=' rotate-90'
+                            fill={'red'}
+                            objectFit="cover"
+                            width={15} height={15} src={playIcon}
+                        />
+                    </Button>
+                </motion.div>
+            </motion.div>
+
+
+
         </AnimateSharedLayout>
     )
 }
