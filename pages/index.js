@@ -5,16 +5,17 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeadHtml from '../components/HeadHtml'
 import WapperProduct from '../components/WapperProduct'
-import ListProduct from '../components/ListProduct'
+import ListProduct from '../components/Products/ListProduct'
 export default function Home() {
   return (
     <div className='max-h-screen'>
       <HeadHtml />
       <Header />
-           <div className='float-left  w-full bg-search flex flex-col h-screen'>
-              <WapperProduct />
-              <ListProduct />
-         </div>
+      <div
+        className='bg-search px-20 py-10 mt-16 flex flex-col'>
+        <WapperProduct />
+        <ListProduct />
+      </div>
     </div>
   )
 }

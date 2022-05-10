@@ -27,7 +27,7 @@ export default function CarouselComponent() {
                     <h1>
                         View offers
                         </h1>
-                    <Images className='object-cover ' width={15} height={15} src={PlayIcon} />
+                    <Images objectFit="cover" width={15} height={15} src={PlayIcon} />
                 </button>
             </div>
             <div className='flex flex-col  p-20 font-bold h-custom bg-violet-600/90   rounded-lg'>
@@ -51,7 +51,7 @@ export default function CarouselComponent() {
                     <h1>
                         View offers
                         </h1>
-                    <Images className='object-cover ' width={15} height={15} src={PlayIcon} />
+                    <Images objectFit="cover" width={15} height={15} src={PlayIcon} />
                 </button>
             </div>
             <div className='flex flex-col  p-20 font-bold h-custom bg-pink-600/90   rounded-lg'>
@@ -75,7 +75,7 @@ export default function CarouselComponent() {
                     <h1>
                         View offers
                         </h1>
-                    <Images className='object-cover ' width={15} height={15} src={PlayIcon} />
+                    <Images objectFit="cover" width={15} height={15} src={PlayIcon} />
                 </button>
             </div>
             <div className='flex flex-col  p-20 font-bold h-custom bg-amber-600/90   rounded-lg'>
@@ -99,7 +99,7 @@ export default function CarouselComponent() {
                     <h1>
                         View offers
                         </h1>
-                    <Images className='object-cover ' width={15} height={15} src={PlayIcon} />
+                    <Images objectFit="cover" width={15} height={15} src={PlayIcon} />
                 </button>
             </div>
 

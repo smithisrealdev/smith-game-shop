@@ -31,7 +31,7 @@ export default function Header() {
         }
     };
     return (
-        <nav className="bg-white font-main border-b-2 border-bottom-nav h-22 flex items-center px-20 sticky top-0 z-10">
+        <nav className="bg-white font-main border-b-2 border-bottom-nav h-22 flex items-center px-20 fixed w-full top-0 z-10">
             <div className='w-1/6 flex items-center'>
                 <div className='w-24 h-20'>
                     <Lottie options={defaultOptions}

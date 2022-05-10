@@ -2,12 +2,14 @@ import React from 'react'
 import Images from 'next/image'
 import ForwardIcon from '../assets/images/icon-forward.png'
 import DownIcon from '../assets/images/downArrow.png'
+import { motion } from "framer-motion";
+import {item} from '../utils/motionVariants'
 export default function CardCategory({ img, titlCategory }) {
     return (
-        <div className=' relative w-52 h-54 justify-center'>
+        <motion.div variants={item} className=' relative w-52 h-54 justify-center cursor-pointer'>
             <div className='flex h-full items-end justify-center z-20'>
                 <div className={
-                    titlCategory === 'Arcade' ? 'flex items-end shadow-xl bg-orange-400 shadow-orange-400/50 rounded-lg h-32 w-44' :
+                    titlCategory === 'Arcade' ? 'flex items-end shadow-xl  bg-orange-400 shadow-orange-400/50 rounded-lg h-32 w-44' :
                         titlCategory === 'Strategy' ? 'flex items-end shadow-xl bg-rose-500 shadow-rose-400/50 rounded-lg h-32 w-44' :
                             titlCategory === 'Action' ? 'flex items-end shadow-xl bg-emerald-500 shadow-emerald-400/50 rounded-lg h-32 w-44' : null} >
                     <div className='h-20 font-extrabold text-white w-full px-5 flex justify-between items-center'>
@@ -15,7 +17,7 @@ export default function CardCategory({ img, titlCategory }) {
                             {titlCategory}
                         </h1>
                         <button className='bg-forward w-6 h-6 flex items-center justify-center rounded-full'>
-                            <Images className='object-cover ' width={12} height={12} src={ForwardIcon} />
+                            <Images objectFit="cover" width={12} height={12} src={ForwardIcon} />
                         </button>
 
                     </div>
@@ -43,6 +45,6 @@ export default function CardCategory({ img, titlCategory }) {
                         <Images className='object-cover bg-red-50 rounded-lg' height={140} width={140} src={img} />
                     </div>
                 </div>}
-        </div>
+        </motion.div>
     )
 }
