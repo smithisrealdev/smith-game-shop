@@ -21,6 +21,7 @@
     "react": "18.0.0",
     "react-carousel-minimal": "^1.4.1",
     "react-dom": "18.0.0",
+    "react-lorem-ipsum": "^1.4.10",
     "react-lottie": "^1.2.3",
     "react-responsive-carousel": "^3.2.23",
     "react-switch-selector": "^2.2.1",

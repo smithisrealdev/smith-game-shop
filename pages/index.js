@@ -5,17 +5,21 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeadHtml from '../components/HeadHtml'
 import WapperProduct from '../components/WapperProduct'
-import ListProduct from '../components/Products/ListProduct'
+import ListProduct from '../components/Product/ListProduct'
+import { motion,AnimateSharedLayout, AnimatePresence } from "framer-motion";
 export default function Home() {
   return (
     <div className='max-h-screen'>
       <HeadHtml />
       <Header />
-      <div
-        className='bg-search px-20 py-10 mt-16 flex flex-col'>
-        <WapperProduct />
-        <ListProduct />
-      </div>
+      <AnimateSharedLayout>
+        <motion.div
+          className='bg-search px-20 py-10 mt-16 flex flex-col'>
+          <WapperProduct />
+          <ListProduct />
+        </motion.div>
+      </AnimateSharedLayout>
+
     </div>
   )
 }
