@@ -8,7 +8,7 @@ function Store({ id }) {
       <>
         {/* <List selectedId={id} /> */}
         <AnimatePresence>
-          {id && imageHasLoaded && <Item ids={id} key="item" />}
+          {id && <Item ids={id} key="item" />}
         </AnimatePresence>
       </>
     );

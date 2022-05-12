@@ -39,9 +39,11 @@ export default function Header() {
             </div>
             <div className='flex justify-center items-center gap-6'>
                 <Button variant="outlined" color='warning' className='rounded-full border-1 border-bottom-nav text-slate-700 h-12 px-8'>
-                    {/* <Link href="/"> */}
-                    <h1 className='font-main text-sm'>Sign up</h1>
-                    {/* </Link> */}
+                    <Link href="/signup">
+                        <a>
+                        <h1 className='font-main text-sm'>Sign up</h1>
+                        </a>
+                    </Link>
                 </Button>
                 <Login className='h-12 items-center text-base flex text-slate-700' href="#" underline="none">
                     {'Login'}

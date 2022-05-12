@@ -9,41 +9,49 @@ import Psychonauts2Bg from '../../assets/images/Psychonauts-2_xbox.jpg'
 export const items = [
     {
         id: 'product/callduty',
+        name: 'Call of Duty',
         img: CallDutyBg,
         price: 19.99
     },
     {
         id: 'product/dims',
+        name: 'Dims',
         img: DimsBg,
         price: 12.99
     },
     {
         id: 'product/maxres',
+        name: 'Maxres',
         img: MaxresBg,
         price: 9.99
     },
     {
         id: 'product/capsule',
+        name: 'Capsule',
         img: CapsuleBg,
         price: 11.99
     },
     {
         id: 'product/stalker2',
+        name: 'Stalker2',
         img: Stalker2Bg,
         price: 19.59
     },
     {
         id: 'product/theGunk',
+        name: 'TheGunk',
         img: TheGunkBg,
         price: 14.99
     },
     {
         id: 'product/tellMeWhy',
+        name: 'TellMeWhy',
         img: TellMeWhyBg,
         price: 11.99
     },
     {
         id: 'product/psychonauts2',
+        name: 'Psychonauts2',
         img: Psychonauts2Bg,
         price: 22.99
     },
