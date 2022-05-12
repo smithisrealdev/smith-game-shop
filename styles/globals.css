@@ -190,3 +190,7 @@ table {
 .left-custom {
     left: 34px;
 }
+
+.border-t-1 {
+    border-top-width: 1px;
+}

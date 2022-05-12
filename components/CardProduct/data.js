@@ -8,42 +8,42 @@ import TellMeWhyBg from '../../assets/images/TellMeWhy_xbox.jpg'
 import Psychonauts2Bg from '../../assets/images/Psychonauts-2_xbox.jpg'
 export const items = [
     {
-        id: 'callduty',
+        id: 'product/callduty',
         img: CallDutyBg,
         price: 19.99
     },
     {
-        id: 'dims',
+        id: 'product/dims',
         img: DimsBg,
         price: 12.99
     },
     {
-        id: 'maxres',
+        id: 'product/maxres',
         img: MaxresBg,
         price: 9.99
     },
     {
-        id: 'capsule',
+        id: 'product/capsule',
         img: CapsuleBg,
         price: 11.99
     },
     {
-        id: 'stalker2',
+        id: 'product/stalker2',
         img: Stalker2Bg,
         price: 19.59
     },
     {
-        id: 'theGunk',
+        id: 'product/theGunk',
         img: TheGunkBg,
         price: 14.99
     },
     {
-        id: 'tellMeWhy',
+        id: 'product/tellMeWhy',
         img: TellMeWhyBg,
         price: 11.99
     },
     {
-        id: 'psychonauts2',
+        id: 'product/psychonauts2',
         img: Psychonauts2Bg,
         price: 22.99
     },

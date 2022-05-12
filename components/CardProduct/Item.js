@@ -5,8 +5,9 @@ import Link from "next/link";
 import { items } from "./data";
 import Images from 'next/image';
 export default function Item({ ids }) {
-    const {id,img,price} = items.find(item => item.id === ids);
-    console.log("Items ::",img)
+    console.log("Items ::",ids)
+    const {id,img,price} = items.find(item => item.id === 'product/'+ids);
+    
     return (
             <Link href="/">
                 <a>

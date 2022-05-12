@@ -19,7 +19,7 @@ export default function Home() {
           <ListProduct />
         </motion.div>
       </AnimateSharedLayout>
-
+      <Footer />
     </div>
   )
 }

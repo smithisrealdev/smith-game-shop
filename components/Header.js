@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import Lottie from 'react-lottie';
-import animationData from '../assets/json/game-console.json'
+import AnimationLottie from '../utils/animationLottie'
 import Images from 'next/image'
 import HeartIcon from '../assets/images/heart.png'
 import BagIcon from '../assets/images/bag.png'
@@ -20,25 +19,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     },
 }));
 export default function Header() {
-    const [isStopped, setIsStopped] = useState(false)
-    const [isPaused, setIsPaused] = useState(false)
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice'
-        }
-    };
     return (
         <nav className="bg-white font-main border-b-2 border-bottom-nav h-22 flex items-center px-20 fixed w-full top-0 z-10">
             <div className='w-1/6 flex items-center'>
                 <div className='w-24 h-20'>
-                    <Lottie options={defaultOptions}
-                        height='100%'
-                        width='100%'
-                        isStopped={isStopped}
-                        isPaused={isPaused} />
+                    <AnimationLottie />
                 </div>
                 <h1 className=' font-extrabold text-orange-500 text-2xl'>
                     SmithShop
@@ -55,7 +40,7 @@ export default function Header() {
             <div className='flex justify-center items-center gap-6'>
                 <Button variant="outlined" color='warning' className='rounded-full border-1 border-bottom-nav text-slate-700 h-12 px-8'>
                     {/* <Link href="/"> */}
-                        <h1 className='font-main text-sm'>Sign up</h1>
+                    <h1 className='font-main text-sm'>Sign up</h1>
                     {/* </Link> */}
                 </Button>
                 <Login className='h-12 items-center text-base flex text-slate-700' href="#" underline="none">
