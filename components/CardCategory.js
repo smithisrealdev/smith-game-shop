@@ -1,12 +1,14 @@
-import React from 'react'
+import React,{} from 'react'
 import Images from 'next/image'
 import ForwardIcon from '../assets/images/icon-forward.png'
 import DownIcon from '../assets/images/downArrow.png'
 import { motion } from "framer-motion";
 import { item } from '../utils/motionVariants'
+
+
 export default function CardCategory({ img, titlCategory }) {
     return (
-        <motion.div variants={item} className=' relative w-52 h-54 justify-center'>
+        <motion.div  variants={item} className=' relative w-52 h-54 justify-center'>
             <div className='flex h-full items-end justify-center z-20'>
                 <div className={`flex items-end shadow-xl cursor-pointer rounded-lg h-32 w-44
                 ${
@@ -20,7 +22,7 @@ export default function CardCategory({ img, titlCategory }) {
                             {titlCategory}
                         </h1>
                         <button className='bg-forward w-6 h-6 flex items-center justify-center rounded-full'>
-                            <Images objectFit="cover" width={12} height={12} src={ForwardIcon} />
+                            <Images  objectFit="cover" width={12} height={12} src={ForwardIcon} />
                         </button>
 
                     </div>
@@ -36,7 +38,7 @@ export default function CardCategory({ img, titlCategory }) {
                                 {titlCategory}
                             </h1>
                             <button className='bg-forward w-6 h-6 flex items-center justify-center rounded-full'>
-                                <Images objectFit='cover' className='rotate-90' width={12} height={12} src={ForwardIcon} />
+                                <Images  objectFit='cover' className='rotate-90' width={12} height={12} src={ForwardIcon} />
                             </button>
                         </div>
                     </div>
@@ -45,7 +47,7 @@ export default function CardCategory({ img, titlCategory }) {
             {img &&
                 <div className='absolute top-0 mx-auto left-custom cursor-pointer'>
                     <div className='bg-forward rounded-full flex items-center justify-center'>
-                        <Images className='object-cover bg-red-50 rounded-lg' height={140} width={140} src={img} />
+                        <Images  className='object-cover bg-red-50 rounded-lg' height={140} width={140} src={img} />
                     </div>
                 </div>}
         </motion.div>

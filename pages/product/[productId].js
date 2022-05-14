@@ -1,14 +1,14 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import Item  from "../../components/CardProduct/Item";
+import Detail  from "../../components/CardProduct/Detail";
 function Store({ id }) {
     const imageHasLoaded = true;
     return (
       <>
         {/* <List selectedId={id} /> */}
         <AnimatePresence>
-          {id && <Item ids={id} key="item" />}
+          {id && <Detail ids={id} key="item" />}
         </AnimatePresence>
       </>
     );

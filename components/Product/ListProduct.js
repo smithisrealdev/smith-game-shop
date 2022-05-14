@@ -19,7 +19,7 @@ export default function ListProduct() {
                             <h1>
                                 Price Range
                             </h1>
-                            <h1 className='text-orange-500'>
+                            <h1 className='text-rose-500'>
                                 $1 - $100
                             </h1>
                             <div className='flex w-52 h-14 items-center border-1 p-3 rounded-full border-gray-200'>

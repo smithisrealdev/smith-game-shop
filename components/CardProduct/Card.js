@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState,  } from 'react'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 // import Content from './Content'
 import Images from 'next/image'
@@ -8,6 +8,8 @@ import playIcon from '../../assets/images/iconplay_orange.png'
 import Button from '@mui/material/Button';
 import Link from 'next/link'
 import { items } from './data'
+
+
 export default function Card() {
     return (
         <AnimateSharedLayout>
@@ -18,19 +20,20 @@ export default function Card() {
                 layout>
                 <motion.div className='mt-8 grid grid-cols-4 gap-4 cursor-pointer' layout>
                     {items.map(list => (
-                        <Item id={list.id} img={list.img} price={list.price} key={list.id} />
+                        <Item id={list.id} name={list.name} img={list.img} price={list.price} key={list.id} />
                     ))}
                 </motion.div>
                 <motion.div variants={item} className='flex flex-1 justify-center items-center'>
-                    <Button variant="outlined" color='warning' className='animate-bounce text-orange-500 border-orange-500  justify-around items-center px-5 mt-10 flex rounded-full border-1 h-12 w-40 text-base'>
+                    <button className='animate-bounce text-rose-500 border-rose-500 hover:border-rose-500 hover:bg-red-50 justify-around items-center px-5 mt-10 flex rounded-full border-1 h-12 w-40 text-base'>
                         <h1 className=' text-sm'>Show More</h1>
                         <Images
                             className=' rotate-90'
+                            
                             fill={'red'}
                             objectFit="cover"
                             width={15} height={15} src={playIcon}
                         />
-                    </Button>
+                    </button>
                 </motion.div>
             </motion.div>
         </AnimateSharedLayout>
@@ -38,7 +41,7 @@ export default function Card() {
 }
 
 
-function Item({ id, img, price }) {
+function Item({ id, img, name , price }) {
     const [isOpen, setIsOpen] = useState(false);
     const [ids, setIds] = useState(null);
     const toggleLeave = () => setIsOpen(false);
@@ -65,10 +68,10 @@ function Item({ id, img, price }) {
                             </motion.h1>
                             <motion.div layout className='flex justify-between flex-col w-full h-28' >
                                 <motion.h1 className='text-slate-700 text-xl'>
-                                    Call Of Duty : Black Ops 4
+                                    {name}
                                 </motion.h1>
                                 <div className='flex justify-between gap-x-6 items-center'>
-                                    <motion.h1 className='text-orange-500 font-bold text-xl'>
+                                    <motion.h1 className='text-rose-500 font-bold text-xl'>
                                         ${price}
                                     </motion.h1>
                                     <div className='w-full'>
@@ -93,7 +96,7 @@ function Content() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="flex items-center gap-2 justify-center font-bold text-white w-full h-11 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full" >
+            <div className="flex items-center gap-2 justify-center font-bold text-white w-full h-11 bg-gradient-to-r from-rose-500 to-rose-400 rounded-full" >
                 <Images className='object-cover' src={bag} width={22} height={22} />
 
                 <h1 className='mt-1'>

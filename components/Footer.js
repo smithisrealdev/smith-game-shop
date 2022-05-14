@@ -37,7 +37,7 @@ export default function Footer() {
                     <div className='w-24 h-20'>
                         <AnimationLottie />
                     </div>
-                    <h1 className=' font-extrabold text-orange-500 text-2xl'>
+                    <h1 className=' font-extrabold text-rose-500 text-2xl'>
                         SmithShop
                     </h1>
                 </div>

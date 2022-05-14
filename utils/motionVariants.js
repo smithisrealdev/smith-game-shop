@@ -16,3 +16,18 @@ export const item = {
         opacity: 1
     }
 };
+
+export const detailLeft = {
+    hidden: { x: -20, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1
+    }
+};
+export const detailRight = {
+    hidden: { x: 20, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1
+    }
+};

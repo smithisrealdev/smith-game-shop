@@ -6,53 +6,118 @@ import Stalker2Bg from '../../assets/images/Stalker2_xbox.jpeg'
 import TheGunkBg from '../../assets/images/the-gunk_xbox.jpg'
 import TellMeWhyBg from '../../assets/images/TellMeWhy_xbox.jpg'
 import Psychonauts2Bg from '../../assets/images/Psychonauts-2_xbox.jpg'
+
 export const items = [
     {
         id: 'product/callduty',
-        name: 'Call of Duty',
+        name: 'Call of Duty®: Black Ops 4',
         img: CallDutyBg,
-        price: 19.99
+        detail: 'Black Ops is back! Featuring gritty, grounded, fluid Multiplayer combat, the biggest Zombies offering ever and Blackout, where the universe of Black Ops comes to life in one massive battle royale experience. Soldier up for all-out combat – tailor made for the Black Ops community. ',
+        price: 19.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
-        id: 'product/dims',
-        name: 'Dims',
+        id: 'product/ori',
+        name: 'Ori and the Blind Forest',
         img: DimsBg,
-        price: 12.99
+        detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 12.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
         id: 'product/maxres',
         name: 'Maxres',
         img: MaxresBg,
-        price: 9.99
+        detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 9.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
         id: 'product/capsule',
         name: 'Capsule',
         img: CapsuleBg,
-        price: 11.99
+        detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 11.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
         id: 'product/stalker2',
-        name: 'Stalker2',
+        name: 'Stalker 2',
         img: Stalker2Bg,
-        price: 19.59
+        detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 19.59,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
         id: 'product/theGunk',
-        name: 'TheGunk',
+        name: 'The Gunk',
         img: TheGunkBg,
-        price: 14.99
+        detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 14.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
         id: 'product/tellMeWhy',
-        name: 'TellMeWhy',
+        name: 'Tell Me Why',
         img: TellMeWhyBg,
-        price: 11.99
+        detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 11.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
     {
         id: 'product/psychonauts2',
-        name: 'Psychonauts2',
+        name: 'Psychonauts 2',
         img: Psychonauts2Bg,
-        price: 22.99
+        detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 22.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios'
     },
 ];
