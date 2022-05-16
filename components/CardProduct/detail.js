@@ -1,11 +1,15 @@
-import React from "react";
-import { motion, AnimateSharedLayout } from "framer-motion";
-import { LoremIpsum } from "react-lorem-ipsum";
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { items } from "./data";
 import Images from 'next/image';
-import { container,item, detailLeft, detailRight } from '../../utils/motionVariants'
+import { container, item, detailLeft, detailRight } from '../../utils/motionVariants'
+import PlayIcon from '../../assets/images/detail_card/play.png'
+
+
+
 export default function Detail({ ids }) {
+    const carousel = useRef()
     const {
         id,
         name,
@@ -18,8 +22,22 @@ export default function Detail({ ids }) {
         all_reviews_count,
         release_date,
         developer,
-        publicsher
+        publicsher,
+        gameplay
         , } = items.find(item => item.id === 'product/' + ids);
+    const [previewVideo, setPreviewVideo] = useState(gameplay && gameplay[0].video)
+    const [previewImg, setPreviewImg] = useState(null)
+    const [width, setWidth] = useState(0)
+    const [focus, setFocus] = useState(1)
+    useEffect(() => {
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+    }, [])
+
+    const handleSelectPreview = (listGame) => {
+        setFocus(listGame.id)
+        setPreviewVideo(listGame.video ? listGame.video : null)
+        setPreviewImg(listGame.video ? null : listGame.img)
+    }
 
     return (
         <motion.div
@@ -27,16 +45,16 @@ export default function Detail({ ids }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
             transition={{ duration: 0.2, delay: 0.15 }}
-            className='h-screen w-screen'
+            className="h-screen w-screen"
         >
             <motion.div
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className="flex text-left px-20 h-4/6 gap-6 flex-1">
+                className="flex text-left px-20 h-4/6 gap-6 flex-1 space-x-4">
                 <motion.div variants={detailLeft} className="h-full  justify-center  flex flex-col flex-1 ">
                     <motion.dev variants={container}>
-                        <motion.div variants={item} className='text-5xl font-semibold'>
+                        <motion.div variants={item} className='text-4xl font-semibold text-black'>
                             {name}
                         </motion.div>
                         <motion.div variants={item} className='text-xl text-slate-700 font-medium'>
@@ -83,16 +101,50 @@ export default function Detail({ ids }) {
                             </motion.div>
                         </motion.div>
                         <motion.button variants={item} className="items-center mt-12 justify-center font-bold text-white w-48 h-11 bg-gradient-to-r from-rose-500 to-rose-400 rounded-md" >
-                            {'$'+price+' '}Buy Now
+                            {'$' + price + ' '}Buy Now
                     </motion.button>
-
                     </motion.dev>
-
                 </motion.div>
                 <motion.div variants={detailRight} className="text-6xl items-center justify-center flex flex-1">
-                    <Images objectFit='cover' className='rounded-md' width={700} height={420} src={img} />
+                    {
+                        previewImg ? (
+                            <Images src={previewImg} className="w-full h-full rounded-lg" objectFit='cover' />
+                        ) : (
+                            <iframe className="rounded-lg h-3/4 w-full aspect-[4/4]" src={previewVideo + '?autoplay=1&mute=1'} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" webkitallowfullscreen="true" oallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                        )
+                    }
                 </motion.div>
             </motion.div>
+
+            <motion.dev ref={carousel} className='flex  overflow-hidden cursor-pointer mx-20' >
+                <motion.div className='flex gap-2' drag='x' dragConstraints={{ right: 0, left: -width }}>
+                    {gameplay.map((listGame) => {
+                        return (
+                            <motion.dev key={listGame.id} onClick={() => handleSelectPreview(listGame)} className={`${focus === listGame.id ? 'bg-rose-400' : null} rounded-lg p-1 `} >
+                                {
+                                    !listGame.video ? (
+                                        <motion.div className='flex w-64 h-40 relative'>
+                                            <motion.div className='z-10 absolute bg-transparent w-full h-full' />
+                                            <Images src={listGame.img} className='rounded-lg w-full' height={250} objectFit='cover' />
+                                        </motion.div>
+
+                                    ) : (
+                                        <motion.div className='flex   w-64 h-40 relative'>
+                                            <motion.div className='z-10 absolute flex items-center justify-center bg-transparent w-full h-full' >
+                                                <motion.div className='flex relative'>
+                                                    <motion.div className='z-10 absolute  bg-transparent w-full h-full' />
+                                                    <Images src={PlayIcon} width={60} height={60} objectFit='cover' />
+                                                </motion.div>
+
+                                            </motion.div>
+                                            <Images className='-z-0 rounded-lg w-full' src={listGame.img} height={250} objectFit='cover' />
+                                        </motion.div>
+                                    )
+                                }</motion.dev>
+                        )
+                    })}
+                </motion.div>
+            </motion.dev>
         </motion.div>
     );
 }

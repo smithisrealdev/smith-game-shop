@@ -13,6 +13,7 @@
     "@mui/material": "^5.6.3",
     "autoprefixer": "^10.4.5",
     "babel-plugin-inline-react-svg": "^2.0.1",
+    "carousel-react-rcdev": "^0.0.4",
     "flat-carousel": "^0.0.1",
     "framer-motion": "^6.3.3",
     "next": "12.1.5",
