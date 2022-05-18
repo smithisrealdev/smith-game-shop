@@ -10,8 +10,8 @@ export default function CarouselComponent() {
     return (
         <Carousel className='flex rounded-lg m-0 h-auto bg-transparent shadow-2xl shadow-zinc-500/50' infiniteLoop={true} showStatus={false} autoPlay showArrows={false} showThumbs={false}>
             {
-                Mockdata.map((item) => {
-                    return <div className={
+                Mockdata.map((item,index) => {
+                    return <div key={index} className={
                         `flex flex-col  p-20 font-bold h-custom rounded-lg
                         ${item === 1 ? 'bg-blue-600/90' :
                             item === 2 ? 'bg-violet-600/90' :

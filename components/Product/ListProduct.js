@@ -2,10 +2,10 @@ import React from 'react'
 import SwitchSelectors from './SwitchSelectors'
 import PrettoSliders from './PrettoSliders'
 import Card from '../CardProduct/Card'
-
+import { motion} from "framer-motion";
 export default function ListProduct() {
     return (
-        <div className='flex'>
+        <motion.div className='flex'>
             <div className='flex w-full flex-col'>
                 <h1 className='text-4xl font-semibold'>
                     Our Products
@@ -30,6 +30,6 @@ export default function ListProduct() {
                 </div>
                 <Card />
             </div>
-        </div>
+        </motion.div>
     )
 }

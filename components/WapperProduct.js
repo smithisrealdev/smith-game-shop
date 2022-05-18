@@ -17,7 +17,7 @@ export default function WapperProduct() {
                 <Carousel />
             </motion.div>
             <motion.div
-                className='flex w-5/12'>
+                className='flex w-5/12 justify-between'>
                 <motion.div className=' grid grid-flow-row gap-8'>
                     <CardCategory titlCategory='Arcade' img={ArcadeBg} />
                     <CardCategory titlCategory='Action' img={ActionBg} />

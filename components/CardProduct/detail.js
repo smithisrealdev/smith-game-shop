@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { items } from "./data";
 import Images from 'next/image';
-import { container, item, detailLeft, detailRight } from '../../utils/motionVariants'
+import { container, item, detailLeft, detailRight, detailReview } from '../../utils/motionVariants'
 import PlayIcon from '../../assets/images/detail_card/play.png'
 
 
@@ -116,26 +116,52 @@ export default function Detail({ ids }) {
                 </motion.div>
             </motion.div>
 
-            <motion.dev ref={carousel} className='flex  overflow-hidden cursor-pointer mx-20' >
-                <motion.div className='flex gap-2' drag='x' dragConstraints={{ right: 0, left: -width }}>
+            <motion.dev
+                ref={carousel}
+                className='flex  overflow-hidden cursor-pointer mx-20' >
+                <motion.div
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                    className='flex gap-2'
+                    drag='x'
+                    dragConstraints={{ right: 0, left: -width }}>
                     {gameplay.map((listGame) => {
                         return (
-                            <motion.dev key={listGame.id} onClick={() => handleSelectPreview(listGame)} className={`${focus === listGame.id ? 'bg-rose-400' : null} rounded-lg p-1 `} >
+                            <motion.dev
+                                variants={detailRight}
+
+                                key={listGame.id} onClick={() => handleSelectPreview(listGame)} className={`${focus === listGame.id ? 'bg-rose-400' : null} rounded-lg p-1 `} >
                                 {
                                     !listGame.video ? (
-                                        <motion.div className='flex w-64 h-40 relative'>
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            animate={{ rotate: 360, scale: 1 }}
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 260,
+                                                damping: 20
+                                            }}
+                                            className='flex w-64 h-40 relative'>
                                             <motion.div className='z-10 absolute bg-transparent w-full h-full' />
                                             <Images src={listGame.img} className='rounded-lg w-full' height={250} objectFit='cover' />
                                         </motion.div>
 
                                     ) : (
-                                        <motion.div className='flex   w-64 h-40 relative'>
+                                        <motion.div
+                                            initial={{ scale: 0 }}
+                                            animate={{ rotate: 360, scale: 1 }}
+                                            transition={{
+                                                type: "spring",
+                                                stiffness: 260,
+                                                damping: 20
+                                            }}
+                                            className='flex   w-64 h-40 relative'>
                                             <motion.div className='z-10 absolute flex items-center justify-center bg-transparent w-full h-full' >
                                                 <motion.div className='flex relative'>
                                                     <motion.div className='z-10 absolute  bg-transparent w-full h-full' />
                                                     <Images src={PlayIcon} width={60} height={60} objectFit='cover' />
                                                 </motion.div>
-
                                             </motion.div>
                                             <Images className='-z-0 rounded-lg w-full' src={listGame.img} height={250} objectFit='cover' />
                                         </motion.div>
