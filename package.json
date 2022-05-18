@@ -12,6 +12,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.3",
     "autoprefixer": "^10.4.5",
+    "axios": "^0.27.2",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "carousel-react-rcdev": "^0.0.4",
     "flat-carousel": "^0.0.1",
@@ -24,8 +25,13 @@
     "react-dom": "18.0.0",
     "react-lorem-ipsum": "^1.4.10",
     "react-lottie": "^1.2.3",
+    "react-redux": "^8.0.1",
     "react-responsive-carousel": "^3.2.23",
     "react-switch-selector": "^2.2.1",
+    "redux": "^4.2.0",
+    "redux-api-middleware": "^3.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
     "tailwindcss": "^3.0.24"
   },
   "devDependencies": {

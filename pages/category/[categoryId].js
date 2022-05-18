@@ -1,27 +1,27 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import Detail  from "../../components/CardProduct/Detail";
-function Store({ id }) {
-    const imageHasLoaded = true;
+import CategoryTotal  from "../../components/CategoryDetail/CategoryTotal";
+function Store({ category }) {
+    console.log("category",category)
     return (
       <>
         {/* <List selectedId={id} /> */}
         <AnimatePresence>
-          {id && <Detail ids={id} key="item" />}
+          {category && <CategoryTotal category={category} key="item" />}
         </AnimatePresence>
       </>
     );
   }
 
 
-export default function Products() {
+export default function Category() {
     const router = useRouter()
-    const pid = router.query.productId
+    const pid = router.query.categoryId
     return (
         <div>
             <AnimateSharedLayout type="crossfade">
-               <Store id={pid}/>
+               <Store category={pid}/>
             </AnimateSharedLayout>
         </div>
     )

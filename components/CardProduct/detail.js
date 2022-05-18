@@ -6,14 +6,13 @@ import Images from 'next/image';
 import { container, item, detailLeft, detailRight, detailReview } from '../../utils/motionVariants'
 import PlayIcon from '../../assets/images/detail_card/play.png'
 
-
-
 export default function Detail({ ids }) {
     const carousel = useRef()
     const {
         id,
         name,
         img,
+        category,
         detail,
         price,
         recent_reviews_count,

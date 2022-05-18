@@ -28,7 +28,7 @@ export default function ListProduct() {
                         </div>
                     </div>
                 </div>
-                <Card />
+                <Card type={{category: 'all'}} />
             </div>
         </motion.div>
     )

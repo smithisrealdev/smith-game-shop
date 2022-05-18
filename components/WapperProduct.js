@@ -19,12 +19,12 @@ export default function WapperProduct() {
             <motion.div
                 className='flex w-5/12 justify-between'>
                 <motion.div className=' grid grid-flow-row gap-8'>
-                    <CardCategory titlCategory='Arcade' img={ArcadeBg} />
-                    <CardCategory titlCategory='Action' img={ActionBg} />
+                    <CardCategory id='arcade' titlCategory='Arcade' subTitle='156' img={ArcadeBg} />
+                    <CardCategory id='action' titlCategory='Action' subTitle='312' img={ActionBg} />
                 </motion.div>
                 <motion.div className=' grid grid-flow-row gap-8'>
-                    <CardCategory titlCategory='Strategy' img={StrategyBg} />
-                    <CardCategory titlCategory='Show All' />
+                    <CardCategory id='strategy' titlCategory='Strategy' subTitle='290' img={StrategyBg} />
+                    <CardCategory id='all' titlCategory='Show All' subTitle='+25' />
                 </motion.div>
             </motion.div>
         </motion.div>

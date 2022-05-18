@@ -22,6 +22,7 @@ export const items = [
     {
         id: 'product/callduty',
         name: 'Call of Duty®: Black Ops 4',
+        category: 'action',
         img: CallDutyBg,
         detail: 'Black Ops is back! Featuring gritty, grounded, fluid Multiplayer combat, the biggest Zombies offering ever and Blackout, where the universe of Black Ops comes to life in one massive battle royale experience. Soldier up for all-out combat – tailor made for the Black Ops community. ',
         price: 19.99,
@@ -88,6 +89,7 @@ export const items = [
     {
         id: 'product/ori',
         name: 'Ori and the Blind Forest',
+        category: 'arcade',
         img: DimsBg,
         detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 12.99,
@@ -154,6 +156,7 @@ export const items = [
     {
         id: 'product/maxres',
         name: 'Maxres',
+        category: 'strategy',
         img: MaxresBg,
         detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 9.99,
@@ -220,6 +223,7 @@ export const items = [
     {
         id: 'product/capsule',
         name: 'Capsule',
+        category: 'strategy',
         img: CapsuleBg,
         detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 11.99,
@@ -286,6 +290,7 @@ export const items = [
     {
         id: 'product/stalker2',
         name: 'Stalker 2',
+        category: 'arcade',
         img: Stalker2Bg,
         detail: '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 19.59,
@@ -352,6 +357,7 @@ export const items = [
     {
         id: 'product/theGunk',
         name: 'The Gunk',
+        category: 'action',
         img: TheGunkBg,
         detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 14.99,
@@ -418,6 +424,7 @@ export const items = [
     {
         id: 'product/tellMeWhy',
         name: 'Tell Me Why',
+        category: 'arcade',
         img: TellMeWhyBg,
         detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 11.99,
@@ -484,6 +491,7 @@ export const items = [
     {
         id: 'product/psychonauts2',
         name: 'Psychonauts 2',
+        category: 'action',
         img: Psychonauts2Bg,
         detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
         price: 22.99,
@@ -547,4 +555,72 @@ export const items = [
             },
         ]
     },
+    {
+        id: 'product/test2',
+        name: 'Psychonauts 2',
+        category: 'action',
+        img: Psychonauts2Bg,
+        detail: 'Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC',
+        price: 22.99,
+        recent_reviews_count:146,
+        recent_reviews: 'Very Positive',
+        all_reviews: 'Overwhelmingly Positive',
+        all_reviews_count: 40000,
+        release_date: '11 Mar, 2015',
+        developer: 'Moon Studios GmbH',
+        publicsher: 'Xbox Game Studios',
+         gameplay: [
+            {
+                id:1,
+                 img: CallDutyGamePlay1,
+                video: 'https://www.youtube.com/embed/WEb4HB1bFao'
+            },
+            {
+                id:2,
+                 img: CallDutyGamePlay1,
+                video: 'https://www.youtube.com/embed/uPHQb5JBppY'
+            },
+            {
+                id:3,
+                 img: CallDutyGamePlay1,
+                video: 'https://www.youtube.com/embed/h9XOJhEJlJg'
+            },
+            {
+                id:4,
+                img: CallDutyGamePlay1,
+                video: ''
+            },
+            {
+                id:5,
+                img: CallDutyGamePlay2,
+                video: ''
+            },
+            {
+                id:6,
+                img: CallDutyGamePlay3,
+                video: ''
+            },
+            {
+                id:7,
+                img: CallDutyGamePlay4,
+                video: ''
+            },
+            {
+                id:8,
+                img: CallDutyGamePlay5,
+                video: ''
+            },
+            {
+                id:9,
+                img: CallDutyGamePlay6,
+                video: ''
+            },
+            {
+                id:10,
+                img: CallDutyGamePlay7,
+                video: ''
+            },
+        ]
+    },
+    
 ];
