@@ -20,7 +20,8 @@ import CallDutyPreviweVedio2 from '../../assets/images/detail_card/call_of_duty_
 import CallDutyPreviweVedio3 from '../../assets/images/detail_card/call_of_duty_vedio3.jpg'
 export const items = [
     {
-        id: 'product/callduty',
+        id:1,
+        path: 'product/callduty',
         name: 'Call of Duty®: Black Ops 4',
         category: 'action',
         img: CallDutyBg,
@@ -87,7 +88,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/ori',
+        id:2,
+        path: 'product/ori',
         name: 'Ori and the Blind Forest',
         category: 'arcade',
         img: DimsBg,
@@ -154,7 +156,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/maxres',
+        id:3,
+        path: 'product/maxres',
         name: 'Maxres',
         category: 'strategy',
         img: MaxresBg,
@@ -221,7 +224,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/capsule',
+        id:4,
+        path: 'product/capsule',
         name: 'Capsule',
         category: 'strategy',
         img: CapsuleBg,
@@ -288,7 +292,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/stalker2',
+        id:5,
+        path: 'product/stalker2',
         name: 'Stalker 2',
         category: 'arcade',
         img: Stalker2Bg,
@@ -355,7 +360,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/theGunk',
+        id:6,
+        path: 'product/theGunk',
         name: 'The Gunk',
         category: 'action',
         img: TheGunkBg,
@@ -422,7 +428,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/tellMeWhy',
+        id:7,
+        path: 'product/tellMeWhy',
         name: 'Tell Me Why',
         category: 'arcade',
         img: TellMeWhyBg,
@@ -489,7 +496,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/psychonauts2',
+        id:8,
+        path: 'product/psychonauts2',
         name: 'Psychonauts 2',
         category: 'action',
         img: Psychonauts2Bg,
@@ -556,7 +564,8 @@ export const items = [
         ]
     },
     {
-        id: 'product/test2',
+        id:9,
+        path: 'product/test2',
         name: 'Psychonauts 2',
         category: 'action',
         img: Psychonauts2Bg,

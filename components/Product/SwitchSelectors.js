@@ -8,12 +8,12 @@ const options = [
         value: {
             foo: true
         },
-        selectedBackgroundColor: '#F54462',
+        selectedBackgroundColor: '#a855f7',
     },
     {
         label: "Newest",
         value: "newest",
-        selectedBackgroundColor: "#F54462"
+        selectedBackgroundColor: "#a855f7"
     }
 ];
 
@@ -26,7 +26,7 @@ export default function SwitchSelectors() {
             options={options}
             initialSelectedIndex={initialSelectedIndex}
             backgroundColor={"#ffffff"}
-            fontColor={"#F54462"}
+            fontColor={"#a855f7"}
         />
     )
 }

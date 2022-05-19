@@ -9,27 +9,56 @@ import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import LoupeIcon from '../assets/images/loupe.png'
 import Link from 'next/link'
-
-const StyledBadge = styled(Badge)(({ theme }) => ({
-    '& .MuiBadge-badge': {
-        right: -3,
-        top: 13,
-        backgroundColor: '#F54462',
-        color: '#FFFFFF',
-        border: `2px solid ${theme.palette.background.paper}`,
-        padding: '0 4px',
-    },
-}));
+import xboxOrange from '../assets/json/xbox-icon-orange.json'
+import xboxGreen from '../assets/json/xbox-icon-green.json'
+import xboxRose from '../assets/json/xbox-icon-rose.json'
+import xboxPurple from '../assets/json/xbox-icon-purple.json'
+import { useSelector, useDispatch } from 'react-redux';
+import * as mainAction from '../store/actions/index';
 export default function Navbar() {
+    const dispatch = useDispatch();
+    const handleSelectCategory = () => {
+        dispatch(mainAction.handleCategory('all'));
+    }
+    const {
+        listOrder,
+        category
+    } = useSelector((state) => state.main);
+    const StyledBadge = styled(Badge)(({ theme }) => ({
+        '& .MuiBadge-badge': {
+            right: -3,
+            top: 13,
+            backgroundColor:
+                category === 'arcade' ? '#fb923c' :
+                    category === 'strategy' ? '#f43f5f' :
+                        category === 'action' ? '#12b981' :
+                            '#a855f7',
+            color: '#FFFFFF',
+            border: `2px solid ${theme.palette.background.paper}`,
+            padding: '0 4px',
+        },
+    }));
     return (
         <nav className="bg-white font-main border-b-2 border-bottom-nav h-22 flex items-center px-20 sticky w-full top-0 z-10">
             <div className='w-1/6 flex items-center'>
                 <div className='w-24 h-20'>
-                    <AnimationLottie />
+                    <AnimationLottie
+                        animationData={
+                            category === 'arcade' ? xboxOrange :
+                                category === 'strategy' ? xboxRose :
+                                    category === 'action' ? xboxGreen :
+                                        xboxPurple
+                        }
+                        height={'100%'}
+                        width={'100%'} />
                 </div>
                 <Link href="/" >
-                <a className=' font-extrabold text-rose-500 text-2xl'>
-                    SmithShop
+                    <a onClick={() => handleSelectCategory()} className={` font-extrabold active:scale-90 text-2xl 
+                    ${category === 'arcade' ? 'text-orange-500' :
+                            category === 'strategy' ? 'text-rose-500' :
+                                category === 'action' ? 'text-green-500' :
+                                    'text-purple-500'}`}>
+                        SmithShop
                 </a>
                 </Link>
 
@@ -43,24 +72,29 @@ export default function Navbar() {
 
             </div>
             <div className='flex justify-center items-center gap-6'>
-                <button className='rounded-full border-1 border-bottom-nav hover:border-rose-500 hover:bg-red-50 text-slate-700 h-12 px-8'>
+                <button className={`rounded-full active:scale-90 border-1 border-bottom-nav text-slate-700 h-12 px-8 ${category === 'arcade' ? 'hover:border-orange-700 hover:bg-orange-50' :
+                    category === 'strategy' ? 'hover:border-rose-700 hover:bg-rose-50' :
+                        category === 'action' ? 'hover:border-green-700 hover:bg-green-50' :
+                            'hover:border-purple-700 hover:bg-purple-50'
+
+                    }`}>
                     <Link className='font-main text-sm' href="/signup">
                         <a>
                             Sign up
                         </a>
                     </Link>
                 </button>
-                <Link className='h-12 items-center text-base flex text-slate-700' href="#">
-                    <a>
+                <Link className='h-12 items-center text-base  flex text-slate-700' href="#">
+                    <a className='active:scale-90'>
                         Login
                     </a>
                 </Link>
-                <IconButton aria-label="cart">
+                <IconButton aria-label="cart" className='active:scale-90'>
                     <Images src={HeartIcon} width={26} height={26} />
                 </IconButton>
 
-                <IconButton aria-label="cart">
-                    <StyledBadge badgeContent={4}>
+                <IconButton aria-label="cart" className='active:scale-90'>
+                    <StyledBadge badgeContent={listOrder?.length}>
                         {/* <ShoppingCartIcon /> */}
                         <Images src={BagIcon} width={26} height={26} />
                     </StyledBadge>

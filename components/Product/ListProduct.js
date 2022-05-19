@@ -7,7 +7,7 @@ export default function ListProduct() {
     return (
         <motion.div className='flex'>
             <div className='flex w-full flex-col'>
-                <h1 className='text-4xl font-semibold'>
+                <h1 className='text-5xl font-extrabold'>
                     Our Products
                 </h1>
                 <div className='flex w-full flex-1 justify-between '>
@@ -19,7 +19,7 @@ export default function ListProduct() {
                             <h1>
                                 Price Range
                             </h1>
-                            <h1 className='text-rose-500'>
+                            <h1 className='text-purple-700'>
                                 $1 - $100
                             </h1>
                             <div className='flex w-52 h-14 items-center border-1 p-3 rounded-full border-gray-200'>

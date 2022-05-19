@@ -2,7 +2,7 @@ import React from 'react'
 import Slider, { SliderThumb } from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
 const PrettoSlider = styled(Slider)({
-    color: '#F54462',
+    color: '#a855f7',
     height: 8,
     '& .MuiSlider-track': {
         border: 'none',
@@ -27,7 +27,7 @@ const PrettoSlider = styled(Slider)({
         width: 32,
         height: 32,
         borderRadius: '50% 50% 50% 0',
-        backgroundColor: '#F54462',
+        backgroundColor: '#a855f7',
         transformOrigin: 'bottom left',
         transform: 'translate(50%, -100%) rotate(-45deg) scale(0)',
         '&:before': { display: 'none' },

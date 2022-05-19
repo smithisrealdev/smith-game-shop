@@ -12,3 +12,13 @@ export const handleCategory = (select) => {
     },
   };
 };
+
+export const handleAddOrder_ACTION = `handleAddOrder_ACTION`;
+export const handleAddOrder = (id) => {
+  return {
+    type: handleAddOrder_ACTION,
+    payload: {
+      listOrder: id,
+    },
+  };
+};

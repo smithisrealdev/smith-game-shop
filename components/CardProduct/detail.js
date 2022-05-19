@@ -9,6 +9,7 @@ import PlayIcon from '../../assets/images/detail_card/play.png'
 export default function Detail({ ids }) {
     const carousel = useRef()
     const {
+        path,
         id,
         name,
         img,
@@ -23,7 +24,7 @@ export default function Detail({ ids }) {
         developer,
         publicsher,
         gameplay
-        , } = items.find(item => item.id === 'product/' + ids);
+        , } = items.find(item => item.path === 'product/' + ids);
     const [previewVideo, setPreviewVideo] = useState(gameplay && gameplay[0].video)
     const [previewImg, setPreviewImg] = useState(null)
     const [width, setWidth] = useState(0)
@@ -44,16 +45,29 @@ export default function Detail({ ids }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 0.15 } }}
             transition={{ duration: 0.2, delay: 0.15 }}
-            className="h-screen w-screen"
         >
             <motion.div
                 variants={container}
                 initial="hidden"
                 animate="visible"
-                className="flex text-left px-20 h-4/6 gap-6 flex-1 space-x-4">
+                className="mx-20 ">
+                <motion.div variants={detailLeft} className="flex flex-1 rounded-b-md shadow-lg shadow-zinc-500">
+                    <Images src={img} objectFit='cover' className=" rounded-b-md " width={1440} height={500} priority />
+                </motion.div>
+
+            </motion.div>
+            <motion.div
+                variants={container}
+                initial="hidden"
+                animate="visible"
+                className="flex text-left px-20 h-4/6 my-8 gap-6 flex-1 space-x-4 items-center">
                 <motion.div variants={detailLeft} className="h-full  justify-center  flex flex-col flex-1 ">
                     <motion.dev variants={container}>
-                        <motion.div variants={item} className='text-4xl font-semibold text-black'>
+                        <motion.div
+                            variants={item}
+                            className={`text-6xl font-extrabold ${category === 'arcade' ? 'text-orange-500' :
+                                    category === 'strategy' ? 'text-rose-500' :
+                                        'text-green-700'}`}>
                             {name}
                         </motion.div>
                         <motion.div variants={item} className='text-xl text-slate-700 font-medium'>
@@ -63,7 +77,9 @@ export default function Detail({ ids }) {
                             <motion.div variants={item}>
                                 RECENT REVIEWS:
                             <Link href='#'>
-                                    <a className='text-rose-500'>
+                                    <a className={`${category === 'arcade' ? 'text-orange-500' :
+                                        category === 'strategy' ? 'text-rose-500' :
+                                            'text-green-700'}`}>
                                         {' ' + recent_reviews + ' '}
                                     </a>
                                 </Link>
@@ -72,7 +88,9 @@ export default function Detail({ ids }) {
                             <motion.div variants={item}>
                                 ALL REVIEWS:
                             <Link href='#'>
-                                    <a className='text-rose-500'>
+                                    <a className={`${category === 'arcade' ? 'text-orange-500' :
+                                        category === 'strategy' ? 'text-rose-500' :
+                                            'text-green-700'}`}>
                                         {' ' + all_reviews + ' '}
                                     </a>
                                 </Link>
@@ -85,7 +103,9 @@ export default function Detail({ ids }) {
                             <motion.div variants={item}>
                                 DEVELOPER:
                             <Link href='#'>
-                                    <a className='text-rose-500'>
+                                    <a className={`${category === 'arcade' ? 'text-orange-500' :
+                                        category === 'strategy' ? 'text-rose-500' :
+                                            'text-green-700'}`}>
                                         {' ' + developer + ' '}
                                     </a>
                                 </Link>
@@ -93,23 +113,30 @@ export default function Detail({ ids }) {
                             <motion.div variants={item}>
                                 PUBILSHER:
                             <Link href='#'>
-                                    <a className='text-rose-500'>
+                                    <a className={`${category === 'arcade' ? 'text-orange-500' :
+                                        category === 'strategy' ? 'text-rose-500' :
+                                            'text-green-700'}`}>
                                         {' ' + publicsher + ' '}
                                     </a>
                                 </Link>
                             </motion.div>
                         </motion.div>
-                        <motion.button variants={item} className="items-center mt-12 justify-center font-bold text-white w-48 h-11 bg-gradient-to-r from-rose-500 to-rose-400 rounded-md" >
+                        <motion.button
+                            variants={item}
+                            className={`items-center active:scale-95 mt-12 justify-center shadow-md font-bold text-white w-48 h-11 bg-gradient-to-r  rounded-md
+                            ${category === 'arcade' ? 'shadow-orange-500  from-orange-700 to-orange-400' :
+                                    category === 'strategy' ? 'shadow-rose-500  from-rose-700 to-rose-400' :
+                                        'shadow-green-500  from-green-700 to-green-400'}`} >
                             {'$' + price + ' '}Buy Now
                     </motion.button>
                     </motion.dev>
                 </motion.div>
-                <motion.div variants={detailRight} className="text-6xl items-center justify-center flex flex-1">
+                <motion.div variants={detailRight} className="text-6xl flex flex-1 items-center justify-center">
                     {
                         previewImg ? (
                             <Images src={previewImg} className="w-full h-full rounded-lg" objectFit='cover' />
                         ) : (
-                            <iframe className="rounded-lg h-3/4 w-full aspect-[4/4]" src={previewVideo + '?autoplay=1&mute=1'} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" webkitallowfullscreen="true" oallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                            <iframe className="rounded-lg w-full aspect-[4/4]" height={400} src={previewVideo + '?autoplay=1&mute=1'} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" webkitallowfullscreen="true" oallowfullscreen="true" mozallowfullscreen="true"></iframe>
                         )
                     }
                 </motion.div>
@@ -117,7 +144,7 @@ export default function Detail({ ids }) {
 
             <motion.dev
                 ref={carousel}
-                className='flex  overflow-hidden cursor-pointer mx-20' >
+                className='flex  overflow-hidden cursor-pointer mx-20 mb-10' >
                 <motion.div
                     variants={container}
                     initial="hidden"
@@ -129,8 +156,12 @@ export default function Detail({ ids }) {
                         return (
                             <motion.dev
                                 variants={detailRight}
-
-                                key={listGame.id} onClick={() => handleSelectPreview(listGame)} className={`${focus === listGame.id ? 'bg-rose-400' : null} rounded-lg p-1 `} >
+                                key={listGame.id}
+                                onClick={() => handleSelectPreview(listGame)}
+                                className={`${focus === listGame.id ?
+                                    category === 'arcade' ? 'bg-orange-400' :
+                                        category === 'strategy' ? 'bg-rose-400' :
+                                            'bg-green-400' : null} rounded-lg p-1 active:scale-90`} >
                                 {
                                     !listGame.video ? (
                                         <motion.div
