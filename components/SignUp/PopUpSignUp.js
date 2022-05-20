@@ -63,17 +63,17 @@ export default function PopUpSignUp({ open, handleClose }) {
             <Box sx={style}>
                 <div className="flex flex-1 gap-2 items-center justify-center">
                     <div className="flex items-center justify-center flex-1 flex-col gap-2">
-                        <h1 className=" font-medium text-slate-700 text-5xl">
+                        <h1 className="font-medium text-slate-700 text-5xl">
                             Welcome Back
                         </h1>
-                        <h1 className=" font-normal text-slate-500 text-md">
-                            Join the world's largest community
-                    </h1>
+                        <h1 className="font-normal text-slate-500 text-md">
+                            Join the world largest community
+                        </h1>
                     </div>
                     <div className="w-32 h-24 p-4 flex -ml-28 flex-col bg-white rounded-xl">
                         {MockData.map((item) => {
                             return (
-                                <div className="flex gap-2 items-center ">
+                                <div key={item.key} className="flex gap-2 items-center ">
                                     <div className="flex">
                                         <span className={`animate-ping absolute inline-flex h-2 w-2 rounded-full opacity-75 
                                             ${item.id === 1 ? 'bg-green-400' :
@@ -104,7 +104,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                         <div className="flex gap-4">
                             {MockData.map((item) => {
                                 return (
-                                    <div className="shadow-lg bg-white rounded-2xl flex flex-col justify-between w-32 h-28 p-3">
+                                    <div  key={item.key} className="shadow-lg bg-white rounded-2xl flex flex-col justify-between w-32 h-28 p-3">
                                         <div className="flex justify-between ">
                                             <span className={`animate-ping absolute inline-flex h-3 w-3 rounded-full opacity-75 
                                             ${item.id === 1 ? 'bg-green-400' :

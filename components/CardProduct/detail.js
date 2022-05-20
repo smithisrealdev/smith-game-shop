@@ -136,7 +136,7 @@ export default function Detail({ ids }) {
                         previewImg ? (
                             <Images src={previewImg} className="w-full h-full rounded-lg" objectFit='cover' />
                         ) : (
-                            <iframe className="rounded-lg w-full aspect-[4/4]" height={400} src={previewVideo + '?autoplay=1&mute=1'} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" webkitallowfullscreen="true" oallowfullscreen="true" mozallowfullscreen="true"></iframe>
+                            <iframe className="rounded-lg w-full aspect-[4/4]" height={400} src={previewVideo + '?autoplay=1&mute=1'} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="allowFullScreen" webkitallowFullScreen="true" oallowFullScreen="true" mozallowFullScreen="true"></iframe>
                         )
                     }
                 </motion.div>
