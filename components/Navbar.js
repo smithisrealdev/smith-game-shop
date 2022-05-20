@@ -15,8 +15,12 @@ import xboxRose from '../assets/json/xbox-icon-rose.json'
 import xboxPurple from '../assets/json/xbox-icon-purple.json'
 import { useSelector, useDispatch } from 'react-redux';
 import * as mainAction from '../store/actions/index';
+import Modal from './SignUp/PopUpSignUp'
 export default function Navbar() {
     const dispatch = useDispatch();
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     const handleSelectCategory = () => {
         dispatch(mainAction.handleCategory('all'));
     }
@@ -64,10 +68,9 @@ export default function Navbar() {
 
             </div>
             <div className='w-2/5 ml-40 mr-8 flex justify-center items-center'>
-                <div className='rounded-full w-full h-12 items-center gap-2 flex px-8 bg-search'>
+                <div className='rounded-full w-full h-12 items-center hover:border-1 gap-2 flex px-8 bg-search'>
                     <Images src={LoupeIcon} width={16} height={16} />
-                    <input className='w-full bg-transparent outline-none' placeholder="Search">
-                    </input>
+                    <input className='w-full bg-transparent outline-none' placeholder="Search" />
                 </div>
 
             </div>
@@ -76,30 +79,24 @@ export default function Navbar() {
                     category === 'strategy' ? 'hover:border-rose-700 hover:bg-rose-50' :
                         category === 'action' ? 'hover:border-green-700 hover:bg-green-50' :
                             'hover:border-purple-700 hover:bg-purple-50'
-
                     }`}>
-                    <Link className='font-main text-sm' href="/signup">
-                        <a>
-                            Sign up
-                        </a>
-                    </Link>
+                    Sign up
                 </button>
-                <Link className='h-12 items-center text-base  flex text-slate-700' href="#">
-                    <a className='active:scale-90'>
-                        Login
-                    </a>
-                </Link>
-                <IconButton aria-label="cart" className='active:scale-90'>
-                    <Images src={HeartIcon} width={26} height={26} />
-                </IconButton>
-
-                <IconButton aria-label="cart" className='active:scale-90'>
-                    <StyledBadge badgeContent={listOrder?.length}>
-                        {/* <ShoppingCartIcon /> */}
-                        <Images src={BagIcon} width={26} height={26} />
-                    </StyledBadge>
-                </IconButton>
+            <div onClick={() => handleOpen(true)} className='h-12 items-center cursor-pointer text-base active:scale-90 flex text-slate-700'>
+                    Login
             </div>
-        </nav>
+            <IconButton aria-label="cart" className='active:scale-90'>
+                <Images src={HeartIcon} width={26} height={26} />
+            </IconButton>
+
+            <IconButton aria-label="cart" className='active:scale-90'>
+                <StyledBadge badgeContent={listOrder?.length}>
+                    {/* <ShoppingCartIcon /> */}
+                    <Images src={BagIcon} width={26} height={26} />
+                </StyledBadge>
+            </IconButton>
+            </div>
+            <Modal open={open} handleClose={(value) => handleClose(value)}/>
+        </nav >
     )
 }

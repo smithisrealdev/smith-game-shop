@@ -112,3 +112,11 @@ table {
 .blur-ss {
     filter: blur(2px);
 }
+
+.w-34 {
+    width: 134px;
+}
+
+.h-or {
+    height: 2px ;
+}
