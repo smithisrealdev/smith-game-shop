@@ -1,7 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import Detail  from "../../components/CardProduct/Detail";
+import Detail  from "/components/CardProduct/Detail";
 function Store({ id }) {
     const imageHasLoaded = true;
     return (

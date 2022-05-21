@@ -1,16 +1,12 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import CategoryTotal  from "../../components/CategoryDetail/CategoryTotal";
+import CategoryTotal  from "/components/CategoryDetail/CategoryTotal";
 function Store({ category }) {
-    console.log("category",category)
     return (
-      <>
-        {/* <List selectedId={id} /> */}
         <AnimatePresence>
           {category && <CategoryTotal category={category} key="item" />}
         </AnimatePresence>
-      </>
     );
   }
 

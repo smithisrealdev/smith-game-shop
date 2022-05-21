@@ -2,12 +2,12 @@ import React from 'react'
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
-import MenuIcon from '../../assets/images/menu.png'
+import MenuIcon from '/assets/images/menu.png'
 import Images from 'next/image'
-import Profile1 from '../../assets/images/profile1.png'
-import Profile2 from '../../assets/images/profile2.png'
-import Profile3 from '../../assets/images/profile3.png'
-import Profile4 from '../../assets/images/profile4.png'
+import Profile1 from '/assets/images/profile1.png'
+import Profile2 from '/assets/images/profile2.png'
+import Profile3 from '/assets/images/profile3.png'
+import Profile4 from '/assets/images/profile4.png'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import { useSelector } from 'react-redux';
@@ -73,7 +73,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                     <div className="w-32 h-24 p-4 flex -ml-28 flex-col bg-white rounded-xl">
                         {MockData.map((item) => {
                             return (
-                                <div key={item.key} className="flex gap-2 items-center ">
+                                <div key={item.id} className="flex gap-2 items-center ">
                                     <div className="flex">
                                         <span className={`animate-ping absolute inline-flex h-2 w-2 rounded-full opacity-75 
                                             ${item.id === 1 ? 'bg-green-400' :
@@ -104,7 +104,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                         <div className="flex gap-4">
                             {MockData.map((item) => {
                                 return (
-                                    <div  key={item.key} className="shadow-lg bg-white rounded-2xl flex flex-col justify-between w-32 h-28 p-3">
+                                    <div  key={item.id} className="shadow-lg bg-white rounded-2xl flex flex-col justify-between w-32 h-28 p-3">
                                         <div className="flex justify-between ">
                                             <span className={`animate-ping absolute inline-flex h-3 w-3 rounded-full opacity-75 
                                             ${item.id === 1 ? 'bg-green-400' :
