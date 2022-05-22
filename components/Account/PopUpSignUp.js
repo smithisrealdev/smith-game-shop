@@ -6,8 +6,8 @@ import MenuIcon from '/assets/images/menu.png'
 import Images from 'next/image'
 import Profile1 from '../../assets/images/profile1.png'
 import Profile2 from '../../assets/images/profile2.png'
-import Profile3 from '../../assets/images/profile3.png'
-import Profile4 from '../../assets/images/profile4.png'
+// import Profile3 from '../../assets/images/profile3.png'
+// import Profile4 from '../../assets/images/profile4.png'
 import TwitterIcon from '../../assets/images/login/twitter.png'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
@@ -48,12 +48,12 @@ const MockData = [
     },
     {
         id: 3,
-        profile: Profile3,
+        profile: Profile2,
         name: 'Smith no3'
     },
     {
         id: 4,
-        profile: Profile4,
+        profile: Profile1,
         name: 'Smith no4'
     },
 ]

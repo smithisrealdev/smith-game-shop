@@ -1,11 +1,11 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import Detail  from "../../../components/CardProduct/Detail";
+import Products  from "../../../components/CardProduct/Products";
 function Store({ id }) {
     return (
         <AnimatePresence>
-          {id && <Detail ids={id} key="item" />}
+          {id && <Products ids={id} key="item" />}
         </AnimatePresence>
     );
   }
