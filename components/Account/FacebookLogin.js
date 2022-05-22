@@ -13,7 +13,7 @@ export default function FacebookLogin() {
             scope='public_profile,email'
             callback={responseFacebook}
             render={renderProps => (
-                <button onClick={renderProps.onClick} className='w-7 h-7 active:scale-90 cursor-pointer'><Images src={FacebookIcon} /></button>
+                <button onClick={renderProps.onClick} className='w-7 h-7 active:scale-90 cursor-pointer'><Images alt='' src={FacebookIcon} /></button>
             )}
         />
     )

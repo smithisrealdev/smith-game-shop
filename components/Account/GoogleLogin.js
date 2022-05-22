@@ -11,7 +11,7 @@ export default function GoogleLogin() {
         <Google
             clientId={CLIENT_ID}
             render={renderProps => (
-                <button onClick={renderProps.onClick} className='w-7 h-7 active:scale-90 cursor-pointer' disabled={renderProps.disabled}><Images src={GoogleIcon} /></button>
+                <button onClick={renderProps.onClick} className='w-7 h-7 active:scale-90 cursor-pointer' disabled={renderProps.disabled}><Images alt='' src={GoogleIcon} /></button>
             )}
             buttonText="Login"
             onSuccess={responseGoogle}

@@ -7,7 +7,7 @@ import rootReducer from '../store/index';
 import ReduxThunk from 'redux-thunk';
 import ReduxLogger from 'redux-logger';
 import { apiMiddleware } from 'redux-api-middleware';
-
+import Head from 'next/head'
 const store = createStore(
   rootReducer,
   {},
@@ -16,6 +16,9 @@ const store = createStore(
 function MyApp({ Component, pageProps }) {
   return (
       <Provider store={store}>
+        <Head>
+          <title>SmithShop</title>
+        </Head>
         <Navbar />
         <Component {...pageProps} />
         <Footer />

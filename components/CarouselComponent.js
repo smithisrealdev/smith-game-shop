@@ -52,7 +52,7 @@ export default function CarouselComponent() {
                                     <h1>
                                         View offers
                                     </h1>
-                                    <Images objectFit="cover" width={15} height={15} src={PlayIcon} />
+                                    <Images objectFit="cover" alt='' width={15} height={15} src={PlayIcon} />
                                 </button>
                             </div>
                         )}

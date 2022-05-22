@@ -69,7 +69,7 @@ export default function Navbar() {
             </div>
             <div className='w-2/5 ml-40 mr-8 flex justify-center items-center'>
                 <div className='rounded-full w-full h-12 items-center hover:border-1 gap-2 flex px-8 bg-search'>
-                    <Images src={LoupeIcon} width={16} height={16} />
+                    <Images src={LoupeIcon} alt='' width={16} height={16} />
                     <input className='w-full bg-transparent outline-none' placeholder="Search" />
                 </div>
 
@@ -86,13 +86,13 @@ export default function Navbar() {
                     Login
             </div>
             <IconButton aria-label="cart" className='active:scale-90'>
-                <Images src={HeartIcon} width={26} height={26} />
+                <Images src={HeartIcon} alt='' width={26} height={26} />
             </IconButton>
 
             <IconButton aria-label="cart" className='active:scale-90'>
                 <StyledBadge badgeContent={listOrder?.length}>
                     {/* <ShoppingCartIcon /> */}
-                    <Images src={BagIcon} width={26} height={26} />
+                    <Images alt='' src={BagIcon} width={26} height={26} />
                 </StyledBadge>
             </IconButton>
             </div>

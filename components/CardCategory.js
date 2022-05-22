@@ -15,7 +15,7 @@ export default function CardCategory({ id, img, titlCategory, subTitle }) {
     }
     return (
         <div onClick={() => handleSelectCategory(id)}>
-            <Link href={`/category/${id}`}>
+            <Link href={`/category/${id}`} passHref>
                 <motion.div variants={item} className=' relative w-52 h-54 justify-center'>
                     <div className='flex h-full items-end justify-center z-20'>
                         <div className={`flex items-end shadow-xl cursor-pointer rounded-lg h-32 w-44
@@ -30,7 +30,7 @@ export default function CardCategory({ id, img, titlCategory, subTitle }) {
                                         {titlCategory}
                                     </h1>
                                     <button className='bg-forward w-6 h-6 flex items-center justify-center rounded-full'>
-                                        <Images objectFit="cover" width={12} height={12} src={ForwardIcon} />
+                                        <Images objectFit="cover" alt='' width={12} height={12} src={ForwardIcon} />
                                     </button>
                                 </div>
                                 <div className='flex items-center pl-5 font-medium text-xs text-gray-300 pb-3'>
@@ -52,7 +52,7 @@ export default function CardCategory({ id, img, titlCategory, subTitle }) {
                                             {titlCategory}
                                         </h1>
                                         <button className='bg-forward w-6 h-6 flex items-center justify-center rounded-full'>
-                                            <Images objectFit='cover' className='rotate-90' width={12} height={12} src={ForwardIcon} />
+                                            <Images objectFit='cover' alt='' className='rotate-90' width={12} height={12} src={ForwardIcon} />
                                         </button>
                                     </div>
                                     <div className='flex items-center pl-5 font-medium text-xs text-gray-300 pb-3'>
@@ -65,7 +65,7 @@ export default function CardCategory({ id, img, titlCategory, subTitle }) {
                     {img &&
                         <div className='absolute top-0 mx-auto left-custom cursor-pointer'>
                             <div className='bg-forward rounded-full flex items-center justify-center'>
-                                <Images className='object-cover bg-red-50 rounded-lg' height={140} width={140} src={img} />
+                                <Images className='object-cover bg-red-50 rounded-lg' alt='' height={140} width={140} src={img} />
                             </div>
                         </div>}
                 </motion.div>

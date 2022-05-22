@@ -19,7 +19,7 @@ export default function Content() {
                     category === 'action' ? 'from-green-600 to-green-400 shadow-green-500/50' :
                         'from-purple-600 to-purple-400 shadow-purple-500/50'} 
                     flex active:scale-90 items-center gap-2 justify-center shadow-md font-bold text-white w-full h-11 bg-gradient-to-r rounded-full`}>
-                <Images className='object-cover' src={bag} width={22} height={22} />
+                <Images className='object-cover' alt='' src={bag} width={22} height={22} />
 
                 <h1 className='mt-1'>
                     Add to Cart

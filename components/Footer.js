@@ -132,7 +132,7 @@ export default function Footer() {
                             return (
                                 <Link key={list.id} href={list.source} passHref>
                                     <a target='_blank' className="border-1 active:scale-90 rounded-full flex items-center justify-center p-4">
-                                        <Image src={list.img} objectFit='cover' width={28} height={28} />
+                                        <Image src={list.img} objectFit='cover' alt='' width={28} height={28} />
                                     </a>
                                 </Link>
                             )

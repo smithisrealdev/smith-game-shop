@@ -52,7 +52,7 @@ export default function Detail({ ids }) {
                 animate="visible"
                 className="mx-20 ">
                 <motion.div variants={detailLeft} className="flex flex-1 rounded-b-md shadow-lg shadow-zinc-500">
-                    <Images src={img} objectFit='cover' className=" rounded-b-md " width={1440} height={500} priority />
+                    <Images alt='' src={img} objectFit='cover' className=" rounded-b-md " width={1440} height={500} priority />
                 </motion.div>
 
             </motion.div>
@@ -134,7 +134,7 @@ export default function Detail({ ids }) {
                 <motion.div variants={detailRight} className="text-6xl flex flex-1 items-center justify-center">
                     {
                         previewImg ? (
-                            <Images src={previewImg} className="w-full h-full rounded-lg" objectFit='cover' />
+                            <Images alt='' src={previewImg} className="w-full h-full rounded-lg" objectFit='cover' />
                         ) : (
                             <iframe className="rounded-lg w-full aspect-[4/4]" height={400} src={previewVideo + '?autoplay=1&mute=1'} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen="allowFullScreen" webkitallowFullScreen="true" oallowFullScreen="true" mozallowFullScreen="true"></iframe>
                         )
@@ -174,7 +174,7 @@ export default function Detail({ ids }) {
                                             }}
                                             className='flex w-64 h-40 relative'>
                                             <motion.div className='z-10 absolute bg-transparent w-full h-full' />
-                                            <Images src={listGame.img} className='rounded-lg w-full' height={250} objectFit='cover' />
+                                            <Images alt='' src={listGame.img} className='rounded-lg w-full' height={250} objectFit='cover' />
                                         </motion.div>
 
                                     ) : (
@@ -190,10 +190,10 @@ export default function Detail({ ids }) {
                                             <motion.div className='z-10 absolute flex items-center justify-center bg-transparent w-full h-full' >
                                                 <motion.div className='flex relative'>
                                                     <motion.div className='z-10 absolute  bg-transparent w-full h-full' />
-                                                    <Images src={PlayIcon} width={60} height={60} objectFit='cover' />
+                                                    <Images alt='' src={PlayIcon} width={60} height={60} objectFit='cover' />
                                                 </motion.div>
                                             </motion.div>
-                                            <Images className='-z-0 rounded-lg w-full' src={listGame.img} height={250} objectFit='cover' />
+                                            <Images alt='' className='-z-0 rounded-lg w-full' src={listGame.img} height={250} objectFit='cover' />
                                         </motion.div>
                                     )
                                 }</motion.dev>

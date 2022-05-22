@@ -7,7 +7,6 @@ import Link from 'next/link'
 import Images from 'next/image'
 import { item } from '../../utils/motionVariants'
 export default function Item({ id, path, img, name, price ,type}) {
-    console.log("Item ::",type);
     const [isOpen, setIsOpen] = useState(false);
     const [ids, setIds] = useState(null);
     const toggleLeave = () => setIsOpen(false);
@@ -39,7 +38,7 @@ export default function Item({ id, path, img, name, price ,type}) {
             {/* <motion.div className='absolute top-0 left-0 right-0 bottom-0 -z-10'> */}
             <Link href={path}>
                 <a >
-                    <Images layout="responsive" src={img} className='rounded-lg object-cover' height={250} width={300} />
+                    <Images alt='' layout="responsive" src={img} className='rounded-lg object-cover' height={250} width={300} />
                     <motion.div layout className='px-3'>
                         <motion.h1 className='flex gap-1 items-center text-slate-500 font-light text-sm'>
                             Game <motion.div layout className='w-1 h-1 rounded-full bg-slate-500' /> Xbox One

@@ -51,7 +51,7 @@ export default function Card({ type }) {
                         <h1 className=' text-sm'>Show More</h1>
                         <Images
                             className=' rotate-90'
-
+                            alt=''
                             fill={'red'}
                             objectFit="cover"
                             width={15} height={15} src={playIcon}

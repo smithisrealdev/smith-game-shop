@@ -141,10 +141,10 @@ export default function PopUpSignUp({ open, handleClose }) {
                                                                     'bg-red-400'
                                                         }`}></span>
                                                     <Avatar className="mt-2 bg-transparent cursor-pointer active:scale-90">
-                                                        <Images src={item.profile} layout="fill" />
+                                                        <Images alt='' src={item.profile} layout="fill" />
                                                     </Avatar>
                                                     <span className="relative cursor-pointer active:scale-75 h-4 w-4">
-                                                        <Images objectFit='cover' src={MenuIcon} />
+                                                        <Images alt='' objectFit='cover' src={MenuIcon} />
                                                     </span>
                                                 </div>
                                                 <div className="flex flex-1 items-end justify-center font-bold text-gray-600 text-sm capitalize">
@@ -225,7 +225,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                                         <Images src={FacebookIcon} />
                                     </buttom> */}
                                             <buttom className='w-7 h-7 active:scale-90 cursor-pointer'>
-                                                <Images src={TwitterIcon} />
+                                                <Images alt='' src={TwitterIcon} />
                                             </buttom>
                                         </div>
                                     </div>
