@@ -24,6 +24,8 @@
     "react": "18.0.0",
     "react-carousel-minimal": "^1.4.1",
     "react-dom": "18.0.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.2.2",
     "react-lorem-ipsum": "^1.4.10",
     "react-lottie": "^1.2.3",
     "react-redux": "^8.0.1",

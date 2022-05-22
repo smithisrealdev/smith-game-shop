@@ -15,7 +15,7 @@ import xboxRose from '../assets/json/xbox-icon-rose.json'
 import xboxPurple from '../assets/json/xbox-icon-purple.json'
 import { useSelector, useDispatch } from 'react-redux';
 import * as mainAction from '../store/actions/index';
-import Modal from './SignUp/PopUpSignUp'
+import Modal from './Account/PopUpSignUp'
 export default function Navbar() {
     const dispatch = useDispatch();
     const [open, setOpen] = React.useState(false);
