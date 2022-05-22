@@ -2,7 +2,7 @@ import React from 'react'
 import FacebookIcon from '../../assets/images/login/facebook.png'
 import Facebook from 'react-facebook-login/dist/facebook-login-render-props'
 import Images from 'next/image'
-const APP_ID = '1358586971326471'
+const APP_ID = '688056165791268'
 export default function FacebookLogin() {
     const responseFacebook = (response) => {
         console.log(response);
