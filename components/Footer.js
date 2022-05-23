@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="grid grid-cols-4 border-t-2 border-bottom-nav px-20 py-10">
             <div className="flex">
                 <div className='flex w-full h-2/6 items-center'>
-                    <div className='w-24 h-20'>
+                    {/* <div className='w-24 h-20'>
                         <AnimationLottie
                             animationData={
                                 category === 'arcade' ? xboxOrange :
@@ -53,14 +53,14 @@ export default function Footer() {
                             }
                             height={'100%'}
                             width={'100%'} />
-                    </div>
+                    </div> */}
                     <Link href="/" >
                         <a onClick={() => handleSelectCategory()} className={` font-extrabold active:scale-90 text-2xl 
                     ${category === 'arcade' ? 'text-orange-500' :
                                 category === 'strategy' ? 'text-rose-500' :
                                     category === 'action' ? 'text-green-500' :
                                         'text-purple-500'}`}>
-                            SmithShop
+                            SmithShop.
                 </a>
                     </Link>
                 </div>

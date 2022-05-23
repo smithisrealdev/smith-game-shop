@@ -232,14 +232,14 @@ export default function Register({ setAlreadyAccount }) {
                             category === 'strategy' ? 'text-rose-500' :
                                 category === 'action' ? 'text-green-500' :
                                     'text-purple-500'
-                        }`} onClick={() => setAlreadyAccount(false)}>
+                        }`} onClick={() => setAlreadyAccount(true)}>
                         Login
                     </div>
-                    <ButtonCreate className={`active:scale-95 px-12 ${category === 'arcade' ? 'bg-orange-500' :
-                        category === 'strategy' ? 'bg-rose-500' :
-                            category === 'action' ? 'bg-green-500' :
-                                'bg-purple-500'
-                        }`} variant="contained"><h1>Create</h1></ButtonCreate>
+                    <button className={`active:scale-95 text-white rounded-lg shadow-md  py-2 px-12 ${category === 'arcade' ? 'bg-orange-500 shadow-orange-500/50' :
+                        category === 'strategy' ? 'bg-rose-500 shadow-rose-500/50' :
+                            category === 'action' ? 'bg-green-500 shadow-green-500/50' :
+                                'bg-purple-500 shadow-purple-500/50' 
+                        }`}>Create</button>
                 </div>
 
             </div>

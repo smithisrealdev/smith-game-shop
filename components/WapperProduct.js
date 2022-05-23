@@ -17,12 +17,12 @@ export default function WapperProduct() {
                 <Carousel />
             </motion.div>
             <motion.div
-                className='flex w-5/12 justify-between'>
-                <motion.div className=' grid grid-flow-row gap-8'>
+                className='flex flex-col w-4/12 justify-between'>
+                <motion.div className='flex'>
                     <CardCategory id='arcade' titlCategory='Arcade' subTitle='156' img={ArcadeBg} />
                     <CardCategory id='action' titlCategory='Action' subTitle='312' img={ActionBg} />
                 </motion.div>
-                <motion.div className=' grid grid-flow-row gap-8'>
+                <motion.div className='flex'>
                     <CardCategory id='strategy' titlCategory='Strategy' subTitle='290' img={StrategyBg} />
                     <CardCategory id='all' titlCategory='Show All' subTitle='+25' />
                 </motion.div>

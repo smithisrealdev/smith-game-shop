@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -6,14 +6,12 @@ import MenuIcon from '/assets/images/menu.png'
 import Images from 'next/image'
 import Profile1 from '../../assets/images/profile1.png'
 import Profile2 from '../../assets/images/profile2.png'
-// import Profile3 from '../../assets/images/profile3.png'
-// import Profile4 from '../../assets/images/profile4.png'
 import TwitterIcon from '../../assets/images/login/twitter.png'
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import { useSelector } from 'react-redux';
 import Link from '@mui/material/Link';
-import GoogleLogin from './GoogleLogin'
+import GoogleLogin from './GoogleLogins'
 import FaceBookLogin from './FacebookLogin'
 import Register from './Register'
 import Checkbox from '@mui/material/Checkbox';
@@ -58,9 +56,9 @@ const MockData = [
     },
 ]
 
-export default function PopUpSignUp({ open, handleClose }) {
+export default function PopUpSignUp({ open, handleClose, isSignedIn, setIsSignIn }) {
     const { category } = useSelector((state) => state.main);
-    const [isCreateAccount, setIsCreateAccount] = useState(false)
+    const [isClickSwitch, setIsClickSwitch] = useState()
     const Checkboxs = styled(Checkbox)({
         color: category === 'arcade' ? '#fb923c' :
             category === 'strategy' ? '#f43f5f' :
@@ -73,6 +71,9 @@ export default function PopUpSignUp({ open, handleClose }) {
                         '#a855f7',
         },
     });
+    useEffect(() => {
+        setIsSignIn(isClickSwitch)
+    }, [isClickSwitch])
     return (
         <Modal
             open={open}
@@ -81,7 +82,7 @@ export default function PopUpSignUp({ open, handleClose }) {
             aria-describedby="modal-modal-description"
         >
             <Box sx={style}>
-                {!isCreateAccount ? (
+                {isSignedIn ? (
                     <React.Fragment>
                         <div className="flex flex-1 gap-2 items-center justify-center">
                             <div className="flex items-center justify-center flex-1 flex-col gap-2">
@@ -159,12 +160,19 @@ export default function PopUpSignUp({ open, handleClose }) {
                                                 category === 'action' ? 'bg-green-500 shadow-green-500/50' :
                                                     'bg-purple-500 shadow-purple-500/50'
                                         }`}>
-                                        <Fab className={`active:scale-90 w-12 h-12 text-white 
-                                ${category === 'arcade' ? 'bg-orange-400 hover:bg-orange-400' :
-                                                category === 'strategy' ? 'bg-rose-400 hover:bg-rose-400' :
-                                                    category === 'action' ? 'bg-green-400 hover:bg-green-400' :
-                                                        'bg-purple-400 hover:bg-purple-400'
-                                            }`} aria-label="add">
+                                        <Fab sx={{
+                                            backgroundColor:
+                                                category === 'arcade' ? '#fb923c' :
+                                                    category === 'strategy' ? '#f43f5f' :
+                                                        category === 'action' ? '#12b981' :
+                                                            '#a855f7',
+                                            '&:hover': {
+                                                backgroundColor: category === 'arcade' ? '#fb923c' :
+                                                    category === 'strategy' ? '#f43f5f' :
+                                                        category === 'action' ? '#12b981' :
+                                                            '#a855f7',
+                                            }
+                                        }} className={`active:scale-90 w-12 h-12 text-white`} aria-label="add">
                                             <AddIcon />
                                         </Fab>
                                         <div className="flex flex-1 items-end justify-center font-bold text-white text-sm capitalize">
@@ -187,7 +195,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                                             <input className='bg-transparent w-full outline-none' placeholder="Phone number,username or email" />
                                         </div>
                                         <div className='flex justify-center items-center text-sm'>
-                                            <FormControlLabel control={<Checkboxs/>} label={<h1 className='font-normal text-sm'>Remember for 30 days</h1>}/>             
+                                            <FormControlLabel control={<Checkboxs />} label={<h1 className='font-normal text-sm'>Remember for 30 days</h1>} />
                                         </div>
                                     </div>
                                     <div className='flex flex-col w-3/12 items-start gap-4'>
@@ -204,7 +212,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                                         <button className='flex items-center text-white justify-center shadow-sm shadow-gray-700 rounded-lg active:scale-95 w-full h-12 bg-gray-700'>
                                             Sign In
                                 </button>
-                                        <button onClick={() => setIsCreateAccount(true)} className={`flex items-center text-white justify-center shadow-sm rounded-lg active:scale-95 w-full h-12 ${category === 'arcade' ? 'bg-orange-500 shadow-orange-500/50' :
+                                        <button onClick={() => setIsSignIn(false)} className={`flex items-center text-white justify-center shadow-sm rounded-lg active:scale-95 w-full h-12 ${category === 'arcade' ? 'bg-orange-500 shadow-orange-500/50' :
                                             category === 'strategy' ? 'bg-rose-500 shadow-rose-500/50' :
                                                 category === 'action' ? 'bg-green-500 shadow-green-500/50' :
                                                     'bg-purple-500 shadow-purple-500/50'
@@ -224,9 +232,9 @@ export default function PopUpSignUp({ open, handleClose }) {
                                             {/* <buttom className='w-7 h-7 active:scale-90 cursor-pointer'>
                                         <Images src={FacebookIcon} />
                                     </buttom> */}
-                                            <buttom className='w-7 h-7 active:scale-90 cursor-pointer'>
+                                            <button className='w-7 h-7 active:scale-90 cursor-pointer'>
                                                 <Images alt='' src={TwitterIcon} />
-                                            </buttom>
+                                            </button>
                                         </div>
                                     </div>
 
@@ -246,7 +254,7 @@ export default function PopUpSignUp({ open, handleClose }) {
                         </div>
                     </React.Fragment>
                 ) : (
-                    <Register setAlreadyAccount={(value) => setIsCreateAccount(value)}/>
+                    <Register setAlreadyAccount={(value) => setIsSignIn(value)} />
                 )}
 
 
