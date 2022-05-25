@@ -51,7 +51,7 @@ export default function Basket() {
                     mockData.map((item) => {
                         return (
                             <div key={item.id} className="flex flex-1">
-                                <div className="flex flex-1 h-36 shadow-md rounded-md">
+                                <div className="flex flex-1 h-36 bg-neutral-50 hover:shadow-md rounded-md hover:p-2">
                                     <div className='w-1/6 flex overflow-hidden'>
                                         <Image src={IconText} objectFit='cover' className='rounded-bl-md rounded-tl-md' alt='' />
                                     </div>
@@ -69,7 +69,7 @@ export default function Basket() {
                                                 </h1>
                                                 <h1 className='text-gray-400'>
                                                     |
-                                        </h1>
+                                                </h1>
                                                 <h1>
                                                     ${item.price}
                                                 </h1>
@@ -77,25 +77,18 @@ export default function Basket() {
                                             </div>
                                         </div>
                                         <div className='items-center flex'>
-                                            <div className='item-center cursor-pointer justify-center w-6 h-6'>
+                                            <div className='item-center active:scale-75 cursor-pointer justify-center w-6 h-6'>
                                                 <Image src={IconClose} alt='' objectFit='cover' />
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
-
                             </div>
-
                         )
                     })
                 }
-
-
             </div>
-            <div className='h-72 sticky flex bg-red-400'>
-
+            <div className='h-72 flex bg-neutral-50'>
             </div>
         </React.Fragment>
     )

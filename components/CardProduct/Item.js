@@ -64,9 +64,6 @@ export default function Item({ id, path, img, name, price ,type}) {
                     </motion.div>
                 </a>
             </Link>
-
-
-            {/* </motion.div> */}
         </motion.div>
 
 
